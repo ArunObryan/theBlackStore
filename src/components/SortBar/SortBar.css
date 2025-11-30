@@ -1,0 +1,74 @@
+.sort-bar {
+  background-color: var(--black-secondary);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 20px 30px;
+  margin-bottom: 20px;
+}
+
+.sort-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+}
+
+.product-count {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: var(--white-secondary);
+  font-weight: 300;
+}
+
+.sort-options {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sort-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: var(--white-primary);
+  font-weight: 400;
+}
+
+.sort-select {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: var(--white-primary);
+  background-color: var(--black-tertiary);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 8px 15px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  min-width: 200px;
+}
+
+.sort-select:hover {
+  border-color: var(--gold-primary);
+}
+
+.sort-select:focus {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.sort-select option {
+  background-color: var(--black-tertiary);
+  color: var(--white-primary);
+}
+
+@media (max-width: 768px) {
+  .sort-bar-content {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .sort-select {
+    width: 100%;
+    min-width: auto;
+  }
+}
+

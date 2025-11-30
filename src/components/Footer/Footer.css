@@ -1,0 +1,125 @@
+.main-footer {
+  background-color: var(--black-secondary);
+  border-top: 1px solid var(--gold-primary);
+  padding: 60px 20px 20px;
+  margin-top: 80px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+}
+
+.footer-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: var(--white-secondary);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.footer-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white-primary);
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: var(--white-secondary);
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 300;
+}
+
+.footer-links li:hover {
+  color: var(--gold-primary);
+  padding-left: 5px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  padding-top: 30px;
+}
+
+.footer-bottom-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-bottom-content p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  color: var(--white-secondary);
+  font-weight: 300;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-legal span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  color: var(--white-secondary);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-weight: 300;
+}
+
+.footer-legal span:hover {
+  color: var(--gold-primary);
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-legal {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+

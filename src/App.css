@@ -1,0 +1,17 @@
+/* Premium Black, White, Gold Theme */
+:root {
+  --black-primary: #0a0a0a;
+  --black-secondary: #1a1a1a;
+  --black-tertiary: #2a2a2a;
+  --white-primary: #ffffff;
+  --white-secondary: #f5f5f5;
+  --gold-primary: #d4af37;
+  --gold-secondary: #f4d03f;
+  --gold-accent: #ffd700;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: var(--black-primary);
+}
+

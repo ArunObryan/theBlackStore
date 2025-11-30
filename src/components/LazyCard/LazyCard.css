@@ -1,0 +1,76 @@
+.lazy-card-wrapper {
+  width: 100%;
+  min-height: 400px;
+}
+
+.lazy-card-placeholder {
+  background-color: var(--black-secondary);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(
+    90deg,
+    var(--black-tertiary) 0%,
+    rgba(42, 42, 42, 0.5) 50%,
+    var(--black-tertiary) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.placeholder-content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.placeholder-line {
+  height: 16px;
+  background: linear-gradient(
+    90deg,
+    var(--black-tertiary) 0%,
+    rgba(42, 42, 42, 0.5) 50%,
+    var(--black-tertiary) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+.placeholder-title {
+  width: 60%;
+  height: 24px;
+}
+
+.placeholder-subtitle {
+  width: 40%;
+  height: 16px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
