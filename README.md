@@ -76,11 +76,57 @@ src/
 
 - `npm start` - Runs the app in development mode
 - `npm build` - Builds the app for production
-- `npm test` - Launches the test runner
+- `npm test` - Launches the test runner in watch mode
+- `npm test -- --coverage` - Runs tests with coverage report
+- `npm test -- --watchAll=false` - Runs tests once without watch mode
 - `npm run lint` - Runs ESLint to check for code issues
 - `npm run lint:fix` - Automatically fixes ESLint errors where possible
 - `npm run format` - Formats code using Prettier
 - `npm run format:check` - Checks if code is formatted correctly
+
+## Testing
+
+This project uses Jest and React Testing Library for testing.
+
+### Test Files
+
+Test files are located alongside their components with the `.test.js` extension:
+
+- `src/App.test.js` - Main App component tests
+- `src/pages/Home.test.js` - Home page tests
+- `src/pages/Browsing.test.js` - Browsing page tests
+- `src/components/TitleCard/TitleCard.test.js` - TitleCard component tests
+- `src/components/Navigation/Navigation.test.js` - Navigation component tests
+- `src/components/ProductCard/ProductCard.test.js` - ProductCard component tests
+- `src/components/Filters/Filters.test.js` - Filters component tests
+- `src/components/SortBar/SortBar.test.js` - SortBar component tests
+- `src/components/Footer/Footer.test.js` - Footer component tests
+- `src/data/products.test.js` - Products data validation tests
+
+### Running Tests
+
+```bash
+# Run tests in watch mode (default)
+npm test
+
+# Run tests once
+npm test -- --watchAll=false
+
+# Run tests with coverage
+npm test -- --coverage
+
+# Run a specific test file
+npm test -- TitleCard.test.js
+```
+
+### Test Coverage
+
+The test suite covers:
+- Component rendering and user interactions
+- Navigation and routing
+- Filter and sort functionality
+- Data validation
+- UI component behavior
 
 ## Linting & Code Quality
 

@@ -13,6 +13,11 @@ const Browsing = () => {
   const { gender, category } = useParams();
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
+  
+  // Safety check for undefined params
+  if (!gender) {
+    return <div>Loading...</div>;
+  }
   const [filters, setFilters] = useState({
     sizes: [],
     fabrics: [],
