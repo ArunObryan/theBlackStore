@@ -6,6 +6,7 @@
 .lazy-product-card-placeholder {
   background-color: var(--black-secondary);
   border: 1px solid rgba(212, 175, 55, 0.1);
+  border-radius: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -24,6 +25,7 @@
   );
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
+  border-radius: 16px 16px 0 0;
 }
 
 .placeholder-content {

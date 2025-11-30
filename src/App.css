@@ -8,6 +8,24 @@
   --gold-primary: #d4af37;
   --gold-secondary: #f4d03f;
   --gold-accent: #ffd700;
+  
+  /* Premium Font Families */
+  --font-luxury-title: 'Cinzel', serif;
+  --font-luxury-heading: 'Cormorant Garamond', serif;
+  --font-luxury-body: 'Lato', sans-serif;
+  
+  /* Premium Text Shadows */
+  --text-shadow-gold: 0 0 20px rgba(212, 175, 55, 0.6), 0 0 40px rgba(212, 175, 55, 0.4);
+  --text-shadow-gold-soft: 0 0 15px rgba(212, 175, 55, 0.5);
+  --text-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.8);
+  
+  /* Premium Border Radius */
+  --radius-small: 8px;
+  --radius-medium: 12px;
+  --radius-large: 16px;
+  --radius-xl: 20px;
+  --radius-xxl: 40px;
+  --radius-pill: 50px;
 }
 
 .app {

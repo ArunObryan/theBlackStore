@@ -36,9 +36,9 @@ describe('Navigation', () => {
     
     await waitFor(() => {
       expect(screen.getByText('T-Shirts')).toBeInTheDocument();
-      expect(screen.getByText('Shirts')).toBeInTheDocument();
-      expect(screen.getByText('Pants')).toBeInTheDocument();
     });
+    expect(screen.getByText('Shirts')).toBeInTheDocument();
+    expect(screen.getByText('Pants')).toBeInTheDocument();
   });
 
   test('shows dropdown menu on hover for WOMEN', async () => {
@@ -49,9 +49,9 @@ describe('Navigation', () => {
     
     await waitFor(() => {
       expect(screen.getByText('Dresses')).toBeInTheDocument();
-      expect(screen.getByText('Tops')).toBeInTheDocument();
-      expect(screen.getByText('Pants')).toBeInTheDocument();
     });
+    expect(screen.getByText('Tops')).toBeInTheDocument();
+    expect(screen.getByText('Pants')).toBeInTheDocument();
   });
 
   test('navigates to gender page when MEN is clicked', () => {
@@ -79,10 +79,12 @@ describe('Navigation', () => {
     fireEvent.mouseEnter(menLink);
     
     await waitFor(() => {
-      const tShirtsLink = screen.getByText('T-Shirts');
-      fireEvent.click(tShirtsLink);
-      expect(mockNavigate).toHaveBeenCalledWith('/browse/men/t-shirts');
+      expect(screen.getByText('T-Shirts')).toBeInTheDocument();
     });
+    
+    const tShirtsLink = screen.getByText('T-Shirts');
+    fireEvent.click(tShirtsLink);
+    expect(mockNavigate).toHaveBeenCalledWith('/browse/men/t-shirts');
   });
 });
 

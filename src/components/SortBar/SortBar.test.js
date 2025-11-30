@@ -42,11 +42,10 @@ describe('SortBar', () => {
   test('renders all sort options', () => {
     render(<SortBar sortBy="price-low" onSortChange={mockOnSortChange} productCount={10} />);
     
-    const selectElement = screen.getByDisplayValue('Price: Low to High');
-    expect(selectElement.querySelector('option[value="price-low"]')).toBeInTheDocument();
-    expect(selectElement.querySelector('option[value="price-high"]')).toBeInTheDocument();
-    expect(selectElement.querySelector('option[value="name-asc"]')).toBeInTheDocument();
-    expect(selectElement.querySelector('option[value="name-desc"]')).toBeInTheDocument();
+    expect(screen.getByRole('option', { name: 'Price: Low to High' })).toBeInTheDocument();
+    expect(screen.getByRole('option', { name: 'Price: High to Low' })).toBeInTheDocument();
+    expect(screen.getByRole('option', { name: 'Name: A to Z' })).toBeInTheDocument();
+    expect(screen.getByRole('option', { name: 'Name: Z to A' })).toBeInTheDocument();
   });
 });
 

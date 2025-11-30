@@ -3,21 +3,22 @@ import ProductCard from '../ProductCard/ProductCard';
 import './LazyProductCard.css';
 
 const LazyProductCard = ({ product }) => {
-  const [isVisible, setIsVisible] = useState(false);
   const [hasLoaded, setHasLoaded] = useState(false);
   const cardRef = useRef(null);
 
   useEffect(() => {
+    const currentRef = cardRef.current;
+    if (!currentRef) {
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setIsVisible(true);
             setHasLoaded(true);
             // Once loaded, we can stop observing
-            if (cardRef.current) {
-              observer.unobserve(cardRef.current);
-            }
+            observer.unobserve(currentRef);
           }
         });
       },
@@ -28,13 +29,11 @@ const LazyProductCard = ({ product }) => {
       }
     );
 
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
-    }
+    observer.observe(currentRef);
 
     return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);

@@ -13,11 +13,6 @@ const Browsing = () => {
   const { gender, category } = useParams();
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
-  
-  // Safety check for undefined params
-  if (!gender) {
-    return <div>Loading...</div>;
-  }
   const [filters, setFilters] = useState({
     sizes: [],
     fabrics: [],
@@ -26,6 +21,10 @@ const Browsing = () => {
   const [sortBy, setSortBy] = useState('price-low');
 
   useEffect(() => {
+    // Safety check - if no gender, don't process
+    if (!gender) {
+      return;
+    }
     // Filter products by gender and optionally by category
     let filtered = productsData.filter(
       (product) => product.gender.toLowerCase() === gender.toLowerCase()
@@ -104,6 +103,11 @@ const Browsing = () => {
   const categoryDisplay = category 
     ? category.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase())
     : 'All Items';
+
+  // Safety check for undefined params
+  if (!gender) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="browsing-page">

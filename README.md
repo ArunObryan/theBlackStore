@@ -152,5 +152,11 @@ This project uses ESLint for code linting and Prettier for code formatting.
 
 ## License
 
-This project is private and proprietary.
+This project is private and proprietary. 
+
+**Educational Use Allowed**: You may download, study, and modify this code for learning and educational purposes.
+
+**Commercial Use Requires License**: Any enterprise, commercial, or monetization use requires a commercial license and payment of royalties. Please contact the copyright holder for licensing terms.
+
+See [LICENSE](LICENSE) file for full terms and conditions.
 

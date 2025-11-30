@@ -28,12 +28,14 @@ describe('TitleCard', () => {
 
   test('has clickable class when isClickable is true', () => {
     const { container } = renderWithRouter(<TitleCard isClickable={true} />);
+    // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
     const titleCard = container.querySelector('.title-card-clickable');
     expect(titleCard).toBeInTheDocument();
   });
 
   test('does not have clickable class when isClickable is false', () => {
     const { container } = renderWithRouter(<TitleCard isClickable={false} />);
+    // eslint-disable-next-line testing-library/no-container, testing-library/no-node-access
     const titleCard = container.querySelector('.title-card-clickable');
     expect(titleCard).not.toBeInTheDocument();
   });

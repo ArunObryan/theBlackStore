@@ -2,7 +2,6 @@ import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import Browsing from './Browsing';
-import { productsData } from '../data/products';
 
 // Mock the products data
 jest.mock('../data/products', () => ({
@@ -49,7 +48,6 @@ describe('Browsing', () => {
   beforeEach(() => {
     // Mock IntersectionObserver
     global.IntersectionObserver = class IntersectionObserver {
-      constructor() {}
       disconnect() {}
       observe() {}
       takeRecords() {
