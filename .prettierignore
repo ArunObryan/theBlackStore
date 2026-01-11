@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+build/
+dist/
+coverage/
+
+# Build outputs
+*.min.js
+*.bundle.js
+
+# Config files
+package-lock.json
+yarn.lock
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Public assets
+public/
+

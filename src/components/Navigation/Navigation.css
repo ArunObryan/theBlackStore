@@ -1,0 +1,132 @@
+.main-nav {
+  background-color: var(--black-secondary);
+  border-top: 1px solid var(--gold-primary);
+  border-bottom: 1px solid var(--gold-primary);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 20px 20px;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 20px;
+}
+
+.nav-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-link {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white-primary);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  display: block;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 8px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--gold-primary);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover .nav-link {
+  color: var(--gold-primary);
+}
+
+.nav-item:hover .nav-link::after {
+  width: 80%;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--black-secondary);
+  border: 1px solid var(--gold-primary);
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  min-width: 200px;
+  margin-top: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+  animation: slideDown 0.3s ease-out;
+  overflow: hidden;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.dropdown-item {
+  padding: 15px 25px;
+  color: var(--white-primary);
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+  letter-spacing: 1px;
+  border-radius: 0;
+}
+
+.dropdown-item:first-child {
+  border-radius: 0;
+}
+
+.dropdown-item:last-child {
+  border-radius: 0 0 12px 12px;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background-color: var(--black-tertiary);
+  color: var(--gold-primary);
+  padding-left: 30px;
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    gap: 30px;
+  }
+  
+  .nav-link {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+  }
+}
+
